@@ -1,12 +1,12 @@
 import serial
 import time
 #Configure the serial port. Replace 'COM3' with the appropriate port name on your system.
-ser = serial.Serial('/dev/ttyACM0', 9600)
+ser = serial.Serial('/dev/ttyACM0', 2000000)
 
 
 lines_per_sample = []
 n_sample=0
-while n_sample < 100:
+while n_sample < 20:
     init_time = time.time()
     final_time = 0
     print("muestra tal: ", n_sample)
@@ -25,7 +25,7 @@ while n_sample < 100:
     lines_per_sample.append(n_lines)
     n_sample += 1
 
-with open("samples/lines_per_sample.txt", "w") as lines_file:
+with open("samples/lines_per_sample2.txt", "w") as lines_file:
     lines_file.write(str(lines_per_sample))
     lines_file.flush()
 ser.close()
