@@ -10,7 +10,7 @@ sensor2= open("sensor_data2.txt", "w")
 init_time = time.time()
 final_time = 0
 
-while final_time - init_time < 10:
+while final_time - init_time < 100:
         try:
             line1 = ser1.readline().decode()
             line2 = ser2.readline().decode()
