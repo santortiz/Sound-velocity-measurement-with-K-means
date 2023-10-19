@@ -1,1 +1,66 @@
+#Bpm: 90, distance = 0.6.
+#speeds a medida que aumentamos el número de pulsos.
 {30: 73.34838709677419, 40: 206.7090909090909, 50:94.74166666666666, 60:252.64444444444445, 70: 174.90769230769232, 80:151.58666666666667}
+
+
+#no encontramos ninguna convergencia, procedemos a fijar un número de pulsos y ver si se mantiene el valor de la speed.
+#de darse esto, entonces mediremos perturbaciones respecto a este valor tomándolo como referencia.
+[
+    75.79333333333334,
+    378.96666666666664,
+    227.38,
+    103.35454545454544,
+    73.34838709677419,
+    90.952
+]
+
+
+#no encontramos convergencia a medida que incrementábamos el número de pulsos ni cuando fijamos el número de pulsos.
+#Pensando sobre las causas de esta inestabilidad en las mediciones, nos encontramos con que la ventana de resolución de la velocidad en función del número de pulsos varía de la siguiente forma:
+
+{
+    4: 568.45,
+    5: 454.76,
+    6: 378.96666666666664,
+    7: 324.8285714285714,
+    8: 284.225,
+    9: 252.64444444444445,
+    10: 227.38,
+    11: 206.7090909090909,
+    12: 189.48333333333332,
+    13: 174.90769230769232,
+    14: 162.4142857142857,
+    15: 151.58666666666667,
+    16: 142.1125,
+    17: 133.75294117647059,
+    18: 126.32222222222222,
+    19: 119.6736842105263,
+    20: 113.69,
+    21: 108.27619047619048,
+    22: 103.35454545454544,
+    23: 98.86086956521739,
+    24: 94.74166666666666,
+    25: 90.952,
+    26: 87.45384615384616,
+    27: 84.21481481481482,
+    28: 81.20714285714286,
+    29: 78.40689655172413,
+    30: 75.79333333333334,
+    31: 73.34838709677419,
+    32: 71.05625,
+    33: 68.9030303030303,
+    34: 66.87647058823529,
+    35: 64.96571428571428,
+    36: 63.16111111111111,
+    37: 61.454054054054055,
+    38: 59.83684210526315,
+    39: 58.302564102564105
+ }
+
+ #para medir la velocidad del sonido de 340 m/s, necesitaríamos medir un gap de 
+ distance*11369/(3*speed) = gap
+ 0.6*11369/(3*340) = 6.69
+
+ y los medidores no son capaces de medir ese .69
+
+

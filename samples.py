@@ -1,7 +1,7 @@
 import serial
 import time
 #Configure the serial port. Replace 'COM3' with the appropriate port name on your system.
-ser = serial.Serial('/dev/ttyACM0', 2000000)
+ser = serial.Serial('/dev/ttyACM0', 16000000)
 
 
 lines_per_sample = []
