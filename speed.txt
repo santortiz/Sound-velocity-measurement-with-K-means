@@ -1,10 +1,26 @@
 #Bpm: 90, distance = 0.6.
 #speeds a medida que aumentamos el número de pulsos.
-{30: 73.34838709677419, 40: 206.7090909090909, 50:94.74166666666666, 60:252.64444444444445, 70: 174.90769230769232, 80:151.58666666666667}
+data = {
+    30: 73.35, 
+    40: 206.71, 
+    50: 94.74, 
+    60: 252.64, 
+    70: 174.91, 
+    80: 151.59,
+    90: 130.02,
+    100: 116.81,
+    110: 40.01,
+    120: 160.03,
+    130: 260.04,
+    140: 180.05,
+    150: 100.06
+}
 
 
 #no encontramos ninguna convergencia, procedemos a fijar un número de pulsos y ver si se mantiene el valor de la speed.
 #de darse esto, entonces mediremos perturbaciones respecto a este valor tomándolo como referencia.
+
+#bpm = 90
 [
     75.79333333333334,
     378.96666666666664,
